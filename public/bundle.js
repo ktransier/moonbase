@@ -24185,6 +24185,9 @@
 	module.exports = {
 		"titan": {
 			"title": "Titan"
+		},
+		"europa": {
+			"title": "Europa"
 		}
 	};
 
