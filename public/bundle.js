@@ -24155,20 +24155,38 @@
 	'use strict';
 
 	var React = __webpack_require__(5);
+	var MoonData = __webpack_require__(210);
 
 	var Moon = React.createClass({
 	  displayName: 'Moon',
 
+	  getInitialState: function getInitialState() {
+	    var moon = MoonData[this.props.params.name];
+
+	    return {
+	      title: moon.title
+	    };
+	  },
 	  render: function render() {
 	    return React.createElement(
 	      'div',
 	      null,
-	      this.props.params.name
+	      this.state.title
 	    );
 	  }
 	});
 
 	module.exports = Moon;
+
+/***/ },
+/* 210 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"titan": {
+			"title": "Titan"
+		}
+	};
 
 /***/ }
 /******/ ]);
